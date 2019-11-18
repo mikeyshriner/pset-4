@@ -9,7 +9,7 @@ let Upper = readlineSync.question("Upper bound: ")
 let Sum = 0
 
 while (Lower > Upper) {
-    Lower = readlineSync.question("\nLower bound: ")
+    Lower = readlineSync.question("Lower bound: ")
     Upper = readlineSync.question("Upper bound: ")
 } if (Lower % 2 == 0) {
     for(x = Lower ; x <= Uppers ; x += 2) {
@@ -20,5 +20,5 @@ while (Lower > Upper) {
       Sum = x + Sum
     }
 }
-
+ 
 console.log("\n" + Sum + ".\n")
