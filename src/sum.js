@@ -1,7 +1,7 @@
 const readlineSync = require("readline-Sync")
 
 MIN = Number.MIN_SAFE_INTEGER
-MAx = Number.MAx_SAFE_INTEGER
+MAX = Number.MAX_SAFE_INTEGER
 
 let Lower = readlineSync.question("\nLower bound: ")
 let Upper = readlineSync.question("Upper bound: ")
@@ -11,14 +11,16 @@ let Sum = 0
 while (Lower > Upper) {
     Lower = readlineSync.question("Lower bound: ")
     Upper = readlineSync.question("Upper bound: ")
-} if (Lower % 2 == 0) {
-    for(x = Lower ; x <= Uppers ; x += 2) {
-      Sum = x + Sum
+} if (Lower%2===0) {
+    for(i=Lower;i<=Upper;i+=2) {
+      Sum=i+Sum
     }
 } else {
-    for(x = Lower + 1 ; x <= Upper ; A += 2) {
-      Sum = x + Sum
+    for(i = Lower++;i<= Upper;i+=2) {
+      Sum=i+Sum
     }
 }
- 
-console.log("\n" + Sum + ".\n")
+
+var Final = Sum.toLocaleString("en")
+
+console.log("\n" + Final + ".\n")
