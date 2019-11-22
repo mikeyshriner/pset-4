@@ -8,7 +8,7 @@ MAX = Number.MAX_SAFE_INTEGER
 
 let x = 1
 
-while (x >= 0) {
+while (x >= 0 || count <= 1) {
     x = Number(readlineSync.question("Non-negative integer: "))
     add = add + x
     count = count++
