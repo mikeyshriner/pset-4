@@ -1,20 +1,22 @@
 const readlineSync = require("readline-Sync")
 
-const MIN = 1
-const MAX = Number.MAX_SAFE_INTEGER
+let f1 = 0;
+let i2 = 1;
+let answer = 0;
 
-Integer = readlineSync.question("\nPositive Integer: ")
+let number = readlineSync.question("\nPositive integer: ")
 
-while (0 > Integer) && !(Number.isInteger(Integer)) {
-    Number = readlineSync.question("Positive: ")
+while (number < 1 || number > 78 || number % 1 != 0) {
+    number = readlineSync.question("Positive integer: ");
 }
 
-function fib(n){
-  let arr = [0, 1];
-  for (let i = 2; i < n + 1; i++){
-    arr.push(arr[i - 2] + arr[i -1])
-  }
- return arr[n]
+for (let i = 1; i < number; i++) {
+  answer = f1 + i2;
+  f1 = i2;
+  i2 = answer;
 }
 
-console.log("\n" + arr + ".\n")
+console.log("\n" + answer.toLocaleString("en") + ".")
+
+// use let or const, not var
+// variables should begin with lowercase letters
