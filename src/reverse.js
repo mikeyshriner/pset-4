@@ -1,12 +1,23 @@
 const readlineSync = require("readline-Sync")
 
-MIN = 1
-MAX = MAX_SAFE_INTEGER
+let x = 0
+let space = ""
 
-let X = readlineSync.question("\nPositive Integer: ")
+console.log()
 
-while (!X.isInteger(Integer)) {
-    let X = readlineSync.question("Positive Integer: ")
+do {
+    x = Number(readlineSync.question("Positive integer: "));
+} while (x < 1 || x > Number.MAX_SAFE_INTEGER || !Number.isInteger(x));
+
+while (x > 0) {
+  let value = (x % 10)
+  x = Math.floor(x/10)
+
+  if (x > 0) {
+    space = space + value + ", ";
+  } else {
+    space = space + value + ". ";
+  }
 }
 
-if 
+console.log("\n" + space);
